@@ -17,7 +17,7 @@ class CategoriesDetail(APIView):
     def get_object(self, pk):
         try:
             return Category.objects.get(id=pk)
-        except Product.DoesNotExist:
+        except Category.DoesNotExist:
             raise Http404
 
     def get(self, request, pk):
